@@ -193,7 +193,9 @@ server.listen(800, '127.0.0.1', () => {
 
 //SOLUTION 2: Using Pipe Method
 
-server.on('request', (req, res) =>{
-    let rs= fs.createReadStream('./files/LargeFile.txt');
-    rs.pipe(res);
-});
+// server.on('request', (req, res) =>{
+//     let rs= fs.createReadStream('./files/LargeFile.txt');
+//     rs.pipe(res);
+//     // ReadableStream.pipe(WritableStream)
+//     //pipe method can be used only on readable stream
+// });
