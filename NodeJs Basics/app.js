@@ -48,10 +48,10 @@ rl.on('close', () => {
 
 // CREATING A SIMPLE WEB SERVER
 // ***************************************
-const html = fs.readFileSync('./Template/index.html', 'utf-8');
-let products = JSON.parse(fs.readFileSync('./Data/Data.json', 'utf-8'));
-const ProductListhtml = fs.readFileSync('./Template/ProductList.html', 'utf-8');
-const ProductDetailhtml = fs.readFileSync('./Template/ProductDetail.html', 'utf-8');
+//const html = fs.readFileSync('./Template/index.html', 'utf-8');
+//let products = JSON.parse(fs.readFileSync('./Data/Data.json', 'utf-8'));
+//const ProductListhtml = fs.readFileSync('./Template/ProductList.html', 'utf-8');
+//const ProductDetailhtml = fs.readFileSync('./Template/ProductDetail.html', 'utf-8');
 // const ProdcutListhtmlmodifyied = products.map((product) => {
 //     let output = ProductListhtml.replace('{{%IMAGE%}}', product.productImage);
 //     output = output.replace('{{%NAME%}}', product.name);
@@ -143,10 +143,10 @@ const ProductDetailhtml = fs.readFileSync('./Template/ProductDetail.html', 'utf-
 //     console.log(`Server is running on port ${PORT}`);
 // });
 
-const server = http.createServer();
-server.listen(800, '127.0.0.1', () => {
-    console.log("server stated");
-});
+// const server = http.createServer();
+// server.listen(800, '127.0.0.1', () => {
+//     console.log("server stated");
+// });
 
 
 
@@ -199,3 +199,24 @@ server.listen(800, '127.0.0.1', () => {
 //     // ReadableStream.pipe(WritableStream)
 //     //pipe method can be used only on readable stream
 // });
+
+
+
+// console.log("started");
+
+// //stored in 1st phase
+// setTimeout(()=>{
+//     console.log("time clock executed");
+// },0);
+
+// fs.readFile('./files/input.txt',()=>{
+// console.log("read file exuted");
+// });
+
+
+// //stored in 3rd phase
+// setImmediate(()=>{
+// console.log('immediate excuted');
+// });
+
+// console.log("Ended");
