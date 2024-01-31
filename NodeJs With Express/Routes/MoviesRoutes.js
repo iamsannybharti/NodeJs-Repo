@@ -3,7 +3,7 @@ const Router = express.Router();
 const MoviesController = require('./../Controllers/MovieController');
 
 
-
+Router.param('Id',MoviesController.CheckId);
 
 
 
@@ -11,7 +11,7 @@ const MoviesController = require('./../Controllers/MovieController');
 
 Router.route('/')
     .get(MoviesController.GetMovies)
-    .post(MoviesController.addMovie)
+    .post(MoviesController.ValidateBody,MoviesController.addMovie)
 
 
 Router.route('/:Id')

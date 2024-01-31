@@ -7,8 +7,10 @@ const MovieRoute = require('./Routes/MoviesRoutes')
 
 let app = express();
 // middelwere
+
 app.use(express.json());
 app.use(morgan('dev'));
+app.use(express.static('./Public'));
 const logger = function (req, res, next) {
     console.log("custom middlewere executed");
     next();
